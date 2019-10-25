@@ -1,9 +1,9 @@
 //
 //  NavigationBar.swift
-//  blueberryone-client-ios
+//  weatheropen
 //
-//  Created by Boris Sagan on 4/23/19.
-//  Copyright © 2019 IT-nity. All rights reserved.
+//  Created by Bohdan Yankivskyi on 8/16/19.
+//  Copyright © 2019 by. All rights reserved.
 //
 
 import UIKit

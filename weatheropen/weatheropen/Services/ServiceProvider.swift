@@ -1,9 +1,9 @@
 //
 //  ServiceProvider.swift
-//  blueberryone-client-ios
+//  weatheropen
 //
-//  Created by Boris Sagan on 4/16/19.
-//  Copyright © 2019 IT-nity. All rights reserved.
+//  Created by Bohdan Yankivskyi on 8/16/19.
+//  Copyright © 2019 by. All rights reserved.
 //
 
 import Foundation
@@ -21,7 +21,6 @@ final class ServiceProvider {
         return [http, weather]
     }
     
-   // http://api.openweathermap.org/data/2.5/weather
     // MARK: - Initialization
     private init() {
         let environment = Environment("Dev", host: "http://api.openweathermap.org/data", version: "2.5") //FIXME: - HUINYA

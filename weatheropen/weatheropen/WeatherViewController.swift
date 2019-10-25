@@ -19,16 +19,19 @@ class WeatherViewController: UIViewController {
     private var condition: WeatherCondition?
     var city: String?
     let APP_ID = "4a401aaf688ec915d989e4b0f9d98a46"
+
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
     // MARK: - ViewController's Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        getWeather()
+        
+        getWeather(city: city!)
+        
     }
     
-    func getWeather() {
-        guard let city = city else { return }
+    // MARK: - Private Functions
+    private func getWeather(city: String) {
         ServiceProvider.shared.weather.getWeather(city: city, appID: APP_ID) { [weak self] (result) in
             DispatchQueue.main.async {
                 guard let strongSelf = self else { return }
@@ -55,7 +58,7 @@ class WeatherViewController: UIViewController {
         
     }
     
-    func updateWeatherIcon(condition: Int) -> String {
+    private func updateWeatherIcon(condition: Int) -> String {
         switch (condition) {
         case 0...300 :
             return "tstorm1"
@@ -89,5 +92,32 @@ class WeatherViewController: UIViewController {
     @IBAction func backAction(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+
+    @IBAction func searchAction(_ sender: UIButton) {
+        let chooseCity: ChooseCityViewController = UIStoryboard(storyboard: .main).instantiateViewController()
+        chooseCity.delegate = self
+        present(chooseCity, animated: true, completion: nil)
+        
+    }
     
+    // BAD PRACTICE //
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        if segue.identifier == "chooseCityName" {
+//
+//            let destinationVC = segue.destination as! ChooseCityViewController
+//
+//            destinationVC.delegate = self
+//        }
+//
+//    }
+//
+}
+
+extension WeatherViewController: ChooseCityDelegate {
+    
+    func userEnteredANewCityName(city: String) {
+        getWeather(city: city)
+        
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00E584B2362D81000C82690 /* ChooseCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E584A2362D81000C82690 /* ChooseCityViewController.swift */; };
 		F014634F2306CA76009DD250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F014634E2306CA76009DD250 /* AppDelegate.swift */; };
 		F01463542306CA77009DD250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01463522306CA77009DD250 /* Main.storyboard */; };
 		F01463562306CA78009DD250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F01463552306CA78009DD250 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F00E584A2362D81000C82690 /* ChooseCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCityViewController.swift; sourceTree = "<group>"; };
 		F014634B2306CA76009DD250 /* weatheropen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatheropen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F014634E2306CA76009DD250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F01463532306CA77009DD250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				F014634E2306CA76009DD250 /* AppDelegate.swift */,
 				F014639623070662009DD250 /* CityListViewController.swift */,
 				F01463982307071C009DD250 /* WeatherViewController.swift */,
+				F00E584A2362D81000C82690 /* ChooseCityViewController.swift */,
 				F01463522306CA77009DD250 /* Main.storyboard */,
 				F01463552306CA78009DD250 /* Assets.xcassets */,
 				F01463572306CA78009DD250 /* LaunchScreen.storyboard */,
@@ -334,6 +337,7 @@
 				F01463992307071C009DD250 /* WeatherViewController.swift in Sources */,
 				F014636F2306D0B1009DD250 /* HTTPService.swift in Sources */,
 				F01463902307025D009DD250 /* Detail.swift in Sources */,
+				F00E584B2362D81000C82690 /* ChooseCityViewController.swift in Sources */,
 				F014639723070662009DD250 /* CityListViewController.swift in Sources */,
 				F014634F2306CA76009DD250 /* AppDelegate.swift in Sources */,
 				F014639F23070EBE009DD250 /* City.swift in Sources */,

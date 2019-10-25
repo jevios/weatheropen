@@ -25,7 +25,7 @@ class CityListViewController: UIViewController {
         createArray()
     }
     
-    
+    // MARK: - Private Functions
     // MARK: - TableViews
     private func setUpTableView() {
         tableView.dataSource = self
@@ -35,36 +35,18 @@ class CityListViewController: UIViewController {
     }
     
     // MARK: - SetUp Array
-    func createArray() {
+    private func createArray() {
         cities.removeAll()
-        cities.append(City(name: "Kyiv"))
-        cities.append(City(name: "Odesa"))
-        cities.append(City(name: "Kharkiv"))
-        cities.append(City(name: "Dnipro"))
-        cities.append(City(name: "Donetsk"))
-        cities.append(City(name: "Zaporizhia"))
-        cities.append(City(name: "Lviv"))
-        cities.append(City(name: "Kryvyi Rih"))
-        cities.append(City(name: "Rivne"))
-        cities.append(City(name: "Mariupol"))
-        cities.append(City(name: "Mykolaiv"))
-        cities.append(City(name: "Texas"))
-        cities.append(City(name: "California"))
-        cities.append(City(name: "Nagoya"))
-        cities.append(City(name: "Noshiro"))
-        cities.append(City(name: "Nebraska"))
-        cities.append(City(name: "Seiyo"))
-        cities.append(City(name: "Alaska"))
-        cities.append(City(name: "Wisconsin Dells"))
-        cities.append(City(name: "New York"))
-        cities.append(City(name: "Zimbabwe"))
-        cities.append(City(name: "Chicago"))
+        cities.append(City(name: "Shanghai"))
+        cities.append(City(name: "Beijing"))
+        cities.append(City(name: "Karachi"))
+        cities.append(City(name: "Istanbul"))
+        cities.append(City(name: "Dhaka"))
         cities.append(City(name: "Tokyo"))
-        cities.append(City(name: "Astana"))
-        cities.append(City(name: "Ulaanbaatar"))
-        cities.append(City(name: "Yakutsk"))
-        cities.append(City(name: "Tomisato"))
-        cities.append(City(name: "Sakura"))
+        cities.append(City(name: "Moscow"))
+        cities.append(City(name: "Manila"))
+        cities.append(City(name: "Tianjin"))
+        cities.append(City(name: "Mumbai"))
     }
 }
 
@@ -81,6 +63,23 @@ extension CityListViewController: UITableViewDataSource {
         cell.configure(with: cities[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.red
+        let sectionTitle = UILabel()
+        sectionTitle.text = "The 10 Largest Cities In The World!!!"
+        sectionTitle.textColor = .white
+        sectionTitle.translatesAutoresizingMaskIntoConstraints = false
+        sectionTitle.lineBreakMode = .byWordWrapping
+        sectionTitle.numberOfLines = 0
+        sectionTitle.textAlignment = .center
+        headerView.addSubview(sectionTitle)
+        sectionTitle.widthAnchor.constraint(equalTo: headerView.widthAnchor).isActive = true
+        sectionTitle.centerXAnchor.constraint(equalTo: headerView.centerXAnchor).isActive = true
+        sectionTitle.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
+        return headerView
     }
     
 }
